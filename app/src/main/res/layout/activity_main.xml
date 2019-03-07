@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--untuk Constraint Layout
+     xmlns:android untuk mengakses dan menggunakan atribut yang disediakan oleh namespace android
+     xmlns:app untuk mengakses atribut khusus yang ditentukan dalam namespace app
+     xmlns:tools untuk mereferensikan elemen atau atribut yg didefinisikan dalam namespace tools
+     untuk lebar sesuai layar device
+     untuk tinggi sesuai berdasarkan objek didalamnya
+     context: menyatakan aktivitas yang dilakukan layout di .MainActivity-->
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Elemen TextView
+     @+id untuk mengidentifikasi menjadi textView
+     untuk lebar sesuai layar device
+     untuk tinggi sesuai berdasarkan objek didalamnya
+     @string : memanggil txtalert yg disimpan dalam source string
+     layoutnya berdasarkan device
+     -->
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/choosedate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Elemen Button
+   @+id untuk mengidentifikasi menjadi button
+   untuk lebar sesuai layar device
+   untuk tinggi sesuai berdasarkan objek didalamnya
+   @string : memanggil date yg disimpan dalam source string
+   layoutnya berdasarkan device dan berada di bawah textView
+   -->
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/date"
+        android:onClick="showDatePicker"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
